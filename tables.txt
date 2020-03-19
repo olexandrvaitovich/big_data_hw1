@@ -1,0 +1,12 @@
+Cassandra
+create table reviews_by_product(marketplace text, review_id text, product_id text, product_parent text, product_title text, product_category, star_rating text, helpful_votes text, total_votes text, vine text, verified_purchase text, review_headline text, review_body text, review_date date, primary key (review_id, review_date, product_id, star_rating));   
+create table reviews_by_customer(marketplace text,review_id text, customer_id text, star_rating text, helpful_votes text, total_votes text, vine text, verified_purchase text, review_headline text, review_body text, review_date date, primary key (review_id, review_date, customer_id, star_rating));   
+
+
+
+Mysql
+
+create table reviews(review_id varchar(255) primary key, customer_id text, product_id text, star_rating text, helpful_votes text, total_votes text, vine text, verified_purchase text, review_headline text, review_body text, review_date date) character set utf8mb4 collate utf8mb4_unicode_ci;
+create table customer(customer_id varchar(255) primary key, marketplace text) character set utf8mb4 collate utf8mb4_unicode_ci;
+create table product(product_id varchar(255) primary key, product_parent text, product_title text, product_category text) character set utf8mb4 collate utf8mb4_unicode_ci;
+
